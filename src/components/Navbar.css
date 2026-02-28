@@ -1,0 +1,124 @@
+.navbar-header {
+    background-color: var(--suraj-white);
+    border-bottom: 1px solid var(--suraj-gray-200);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    padding: var(--space-md) 0;
+}
+
+.navbar-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: var(--space-sm);
+    font-family: var(--font-playfair);
+    font-weight: 700;
+    font-size: 24px;
+    color: var(--suraj-black);
+}
+
+.logo-symbol {
+    color: var(--suraj-gold);
+}
+
+.menu-toggle {
+    display: none;
+    background: none;
+    border: none;
+    font-size: 28px;
+    color: var(--suraj-black);
+    cursor: pointer;
+}
+
+.navbar-links {
+    display: flex;
+    align-items: center;
+    gap: var(--space-lg);
+    font-weight: 500;
+}
+
+.navbar-links a,
+.dropdown-label {
+    color: var(--suraj-black);
+    font-size: 16px;
+    cursor: pointer;
+    transition: color 0.2s ease;
+}
+
+.navbar-links a:hover,
+.dropdown-label:hover {
+    color: var(--suraj-gold);
+}
+
+.dropdown {
+    position: relative;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: var(--suraj-white);
+    min-width: 200px;
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    padding: var(--space-sm) 0;
+    flex-direction: column;
+}
+
+.dropdown:hover .dropdown-content {
+    display: flex;
+}
+
+.dropdown-content a {
+    padding: var(--space-sm) var(--space-md);
+    font-size: 14px;
+}
+
+.nav-cta {
+    padding: 10px 24px;
+    font-size: 14px;
+}
+
+@media (max-width: 768px) {
+    .menu-toggle {
+        display: block;
+    }
+
+    .navbar-links {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background-color: var(--suraj-white);
+        flex-direction: column;
+        align-items: flex-start;
+        padding: var(--space-lg) var(--space-md);
+        border-bottom: 1px solid var(--suraj-gray-200);
+        box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+    }
+
+    .navbar-links.open {
+        display: flex;
+    }
+
+    .nav-cta {
+        width: 100%;
+        margin-top: var(--space-md);
+    }
+
+    .dropdown-content {
+        position: static;
+        display: flex;
+        box-shadow: none;
+        padding: var(--space-xs) var(--space-md);
+    }
+}

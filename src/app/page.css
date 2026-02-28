@@ -1,0 +1,412 @@
+/* Page Specific Utility Classes */
+.font-semibold {
+    font-weight: 600;
+}
+
+.font-medium {
+    font-weight: 500;
+}
+
+.max-w-lg {
+    max-width: 600px;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.relative {
+    position: relative;
+}
+
+.p-0 {
+    padding: 0 !important;
+}
+
+.mt-xs {
+    margin-top: var(--space-xs);
+}
+
+.mt-sm {
+    margin-top: var(--space-sm);
+}
+
+.mt-md {
+    margin-top: var(--space-md);
+}
+
+.mt-lg {
+    margin-top: var(--space-lg);
+}
+
+.mt-xl {
+    margin-top: var(--space-xl);
+}
+
+.mt-2xl {
+    margin-top: var(--space-2xl);
+}
+
+.mt-3xl {
+    margin-top: var(--space-3xl);
+}
+
+.mt-4xl {
+    margin-top: var(--space-4xl);
+}
+
+.mb-xs {
+    margin-bottom: var(--space-xs);
+}
+
+.mb-sm {
+    margin-bottom: var(--space-sm);
+}
+
+.mb-md {
+    margin-bottom: var(--space-md);
+}
+
+.mb-lg {
+    margin-bottom: var(--space-lg);
+}
+
+.mb-xl {
+    margin-bottom: var(--space-xl);
+}
+
+.mb-2xl {
+    margin-bottom: var(--space-2xl);
+}
+
+.flex-stack {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: var(--space-md);
+}
+
+.flex-stack-md {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: var(--space-md);
+}
+
+@media (min-width: 768px) {
+    .flex-stack {
+        flex-direction: row;
+        align-items: center;
+    }
+}
+
+.section-title {
+    margin-top: var(--space-xs);
+    margin-bottom: var(--space-xl);
+}
+
+/* 1. Hero Section */
+.hero {
+    position: relative;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding-top: 100px;
+    isolation: isolate;
+}
+
+.hero-bg {
+    object-fit: cover;
+    z-index: -2;
+}
+
+.hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(to bottom, transparent 40%, rgba(13, 13, 13, 0.85) 100%);
+    z-index: -1;
+}
+
+.hero-content {
+    padding-bottom: var(--space-4xl);
+}
+
+.hero-headline {
+    margin-bottom: var(--space-lg);
+}
+
+.hero-subheadline {
+    max-width: 680px;
+    margin-bottom: var(--space-2xl);
+    opacity: 0.85;
+    font-size: clamp(1.125rem, 2vw, 1.25rem);
+    line-height: 1.6;
+}
+
+.hero-ctas {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-md);
+}
+
+@media (min-width: 768px) {
+    .hero-ctas {
+        flex-direction: row;
+        align-items: center;
+    }
+}
+
+.trust-bar {
+    background-color: var(--suraj-white);
+    padding: var(--space-md) 0;
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+.trust-bar-track {
+    display: flex;
+    gap: var(--space-2xl);
+    font-weight: 500;
+    color: var(--suraj-black);
+    animation: scroll 20s linear infinite;
+}
+
+@media (min-width: 768px) {
+    .trust-bar-track {
+        animation: none;
+        justify-content: space-between;
+    }
+}
+
+@keyframes scroll {
+    0% {
+        transform: translateX(100%);
+    }
+
+    100% {
+        transform: translateX(-100%);
+    }
+}
+
+/* 2. The Suraj Difference */
+.diff-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: var(--space-3xl);
+}
+
+@media (min-width: 900px) {
+    .diff-grid {
+        grid-template-columns: 1fr 1fr;
+        align-items: center;
+    }
+}
+
+.diff-heading {
+    margin: var(--space-xs) 0 var(--space-md);
+}
+
+.stats-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: var(--space-md);
+}
+
+.stat-card {
+    padding: var(--space-lg);
+    border-radius: 12px;
+    text-align: center;
+}
+
+.stat-num {
+    font-size: clamp(2.5rem, 4vw, 3.5rem);
+    font-weight: 700;
+    margin-bottom: var(--space-xs);
+    color: var(--suraj-primary);
+}
+
+.stat-label {
+    font-size: 14px;
+    font-weight: 500;
+    color: var(--suraj-black);
+}
+
+/* 3. Product Collections */
+.collections-section {
+    overflow: hidden;
+}
+
+.collections-scroll {
+    display: flex;
+    gap: var(--space-lg);
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    padding-bottom: var(--space-lg);
+    scrollbar-width: none;
+    /* Firefox */
+}
+
+.collections-scroll::-webkit-scrollbar {
+    display: none;
+    /* Safari and Chrome */
+}
+
+.col-card {
+    flex: 0 0 280px;
+    scroll-snap-align: start;
+}
+
+@media (min-width: 768px) {
+    .collections-scroll {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .col-card {
+        flex: 0 0 calc(33.333% - var(--space-lg));
+    }
+}
+
+.col-img-wrapper {
+    position: relative;
+    height: 200px;
+    border-radius: 8px;
+    overflow: hidden;
+    margin-bottom: var(--space-md);
+}
+
+.col-img {
+    object-fit: cover;
+}
+
+.col-tag {
+    position: absolute;
+    top: 12px;
+    left: 12px;
+    background-color: var(--suraj-white);
+    color: var(--suraj-black);
+    padding: 4px 8px;
+    font-size: 10px;
+    font-weight: 700;
+    border-radius: 4px;
+    z-index: 10;
+}
+
+.col-link {
+    color: var(--suraj-primary);
+    font-weight: 600;
+    padding-left: 0;
+    padding-right: 0;
+}
+
+.scroll-indicator {
+    text-align: center;
+    margin-top: var(--space-sm);
+}
+
+@media (min-width: 768px) {
+    .scroll-indicator {
+        display: none;
+    }
+}
+
+/* 4. Open Specifications */
+.features-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: var(--space-md);
+}
+
+@media (min-width: 768px) {
+    .features-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+.feature-icon {
+    font-size: 32px;
+}
+
+.comparison-text {
+    align-self: flex-start;
+}
+
+/* 5. Applications */
+.apps-masonry {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: var(--space-md);
+}
+
+@media (min-width: 768px) {
+    .apps-masonry {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+.app-card {
+    height: 300px;
+    border-radius: 12px;
+    overflow: hidden;
+}
+
+.app-img {
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.app-card:hover .app-img {
+    transform: scale(1.05);
+}
+
+.app-overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 100%;
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgba(15, 17, 21, 0.9) 100%);
+    padding: var(--space-xl) var(--space-lg) var(--space-lg);
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-end;
+}
+
+/* 9. CTA Banner */
+.cta-banner {
+    padding: var(--space-4xl) 0;
+    text-align: center;
+    background-color: var(--suraj-primary);
+    color: var(--suraj-white);
+}
+
+.cta-banner-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.btn-black {
+    background-color: var(--suraj-black);
+    color: var(--suraj-white);
+    padding: 1.25rem 3rem;
+    border-radius: 99px;
+    font-weight: 600;
+    border: 2px solid var(--suraj-black);
+    text-decoration: none;
+    display: inline-block;
+    transition: all 0.3s ease;
+}
+
+.btn-black:hover {
+    background-color: var(--suraj-white);
+    color: var(--suraj-black);
+    border-color: var(--suraj-white);
+}
