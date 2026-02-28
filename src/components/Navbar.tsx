@@ -25,7 +25,7 @@ export default function Navbar() {
     >
       <div className="container mx-auto px-6 max-w-[1440px] flex items-center justify-between">
         <Link href="/" className="relative z-10 flex items-center gap-3">
-          <Image src="/logo.png" alt="Suraj Wood" width={180} height={50} className={`transition-all duration-300 ${scrolled ? 'scale-95' : 'scale-100'} object-contain h-auto`} priority />
+          <Image src={scrolled ? "/logo.png" : "/logo-white.png"} alt="Suraj Wood" width={180} height={50} className={`transition-all duration-300 ${scrolled ? 'scale-95' : 'scale-100'} object-contain h-auto`} priority />
         </Link>
 
         {/* Desktop Nav */}

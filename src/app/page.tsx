@@ -20,7 +20,7 @@ export default function Home() {
     <>
       {/* 1. Hero Section */}
       <section className="hero">
-        <Image src="/hero_kitchen.png" alt="Premium Modular Kitchen with Suraj Wood Acrylic" fill className="hero-bg" priority />
+        <Image src="/hero_kitchen.png" alt="Premium Modular Kitchen with Suraj Wood Acrylic" fill sizes="100vw" className="hero-bg" priority />
         <div className="hero-overlay"></div>
         <div className="container hero-content">
           <motion.div initial="hidden" animate="visible" variants={staggerContainer} className="max-w-container">
@@ -254,14 +254,14 @@ export default function Home() {
 
       {/* 9. CTA Banner */}
       <section className="cta-banner py-4xl relative overflow-hidden">
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(255,255,255,0.1)_0%,transparent_70%)] pointer-events-none"></div>
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(230,57,70,0.15)_0%,transparent_70%)] pointer-events-none"></div>
         <div className="container cta-banner-content relative z-10">
           <motion.h2 initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeUpVariant} className="text-white text-h2 mb-md font-playfair tracking-tight">Ready to Specify Suraj Wood?</motion.h2>
           <motion.p initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeUpVariant} className="body-large text-white/90 mb-xl max-w-2xl text-center">
             Elevate your next architectural project. Request our premium sample kit, download open specifications, or speak directly to a materials engineer today. No obligations.
           </motion.p>
           <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeUpVariant} className="flex-stack-md text-center">
-            <Link href="/contact" className="btn btn-black bg-black text-white hover:bg-white hover:text-black border-2 border-black hover:border-white shadow-2xl hover:shadow-primary/30">
+            <Link href="/contact" className="btn btn-primary shadow-xl shadow-primary/20 hover:shadow-primary/40 text-lg px-8 py-4">
               Request Free Sample Kit
             </Link>
             <p className="small text-white/80 mt-md font-medium tracking-wide uppercase">Dedicated Support: +91-98XXX-XXXXX</p>

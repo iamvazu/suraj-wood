@@ -1,31 +1,42 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import "tailwindcss";
+
+@theme {
+  --color-primary: #E63946;
+  --color-primary-hover: #D62828;
+  --color-suraj-secondary: #457B9D;
+  --color-suraj-accent: #1D3557;
+
+  --color-suraj-black: #0F1115;
+  --color-suraj-white: #FCFCFD;
+
+  --font-inter: var(--font-inter);
+  --font-playfair: var(--font-playfair);
+
+  --spacing-xs: 4px;
+  --spacing-sm: 8px;
+  --spacing-md: 16px;
+  --spacing-lg: 24px;
+  --spacing-xl: 40px;
+  --spacing-2xl: 64px;
+  --spacing-3xl: 104px;
+  --spacing-4xl: 168px;
+}
 
 :root {
-  /* Award-Winning Color Palette: Reddish-Orange Focus */
+  /* Legacy mapping for custom CSS files */
   --suraj-primary: #E63946;
-  /* Bold, striking reddish-orange */
   --suraj-primary-hover: #D62828;
   --suraj-secondary: #457B9D;
-  /* Complementary deep blue-gray for balance */
   --suraj-accent: #1D3557;
-  /* Dark navy for stark contrast */
 
   --suraj-black: #0F1115;
-  /* Extremely dark, cool-toned black */
   --suraj-white: #FCFCFD;
-  /* Crisp, clean white, slightly cool */
 
   --suraj-gray-100: #F1FAEE;
-  /* Very light, airy cyan-tinted gray */
   --suraj-gray-200: #E2E8F0;
   --suraj-gray-300: #64748B;
-  /* Slate gray for secondary text */
   --suraj-gray-400: #334155;
-
   --suraj-gold: #E63946;
-  /* Re-mapping gold to primary for backward compat in legacy classes */
 
   /* Product specific tints */
   --acrylux-beige: #F5F1E8;

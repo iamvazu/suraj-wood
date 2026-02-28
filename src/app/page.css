@@ -161,7 +161,6 @@
 }
 
 .trust-bar {
-    background-color: var(--suraj-white);
     padding: var(--space-md) 0;
     overflow: hidden;
     white-space: nowrap;
@@ -171,7 +170,6 @@
     display: flex;
     gap: var(--space-2xl);
     font-weight: 500;
-    color: var(--suraj-black);
     animation: scroll 20s linear infinite;
 }
 
@@ -381,7 +379,7 @@
 .cta-banner {
     padding: var(--space-4xl) 0;
     text-align: center;
-    background-color: var(--suraj-primary);
+    background-color: var(--suraj-black);
     color: var(--suraj-white);
 }
 
